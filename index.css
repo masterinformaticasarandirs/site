@@ -1,0 +1,253 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    background-color: #f9f9f9;
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Header / Hero Section */
+/* Cabeçalho */
+/* Cabeçalho */
+.hero-section {
+    background: #0000FF;
+    color: #fffffffa;
+    padding: 60px 0;
+    text-align: center;
+    position: relative;
+}
+
+/* Conteúdo do Cabeçalho */
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0 20px;
+}
+
+/* Logo / Imagem do livro */
+.logo {
+    flex: 1; /* Flexível para que ocupe o espaço restante */
+    max-width: 150px; /* Tamanho fixo para a imagem da capa */
+    margin-right: 20px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    
+}
+
+.book-cover {
+    width: 100%;
+    max-width: 150px; /* Ajusta o tamanho da capa */
+    height: auto;
+}
+
+/* Texto do cabeçalho */
+.hero-text {
+    flex: 2; /* ocupa mais espaço */
+    text-align: left; /* Alinha à esquerda */
+}
+
+.hero-text h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.hero-text p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.cta-btn {
+    background-color: #ff7043;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.cta-btn:hover {
+    background-color: #00FF7F;
+}
+
+/* Menu de navegação */
+.main-nav {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.main-nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 15px;
+}
+
+.main-nav ul li {
+    display: inline;
+}
+
+.main-nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.main-nav ul li a:hover {
+    color: #00FF7F;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .main-nav {
+        position: relative;
+        margin-top: 20px;
+    }
+
+    .main-nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+
+/* Video Section */
+.video-section {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 40px 0;
+    background: #e8f5e9;
+    position: relative;
+}
+
+.video-section .video-description {
+    max-width: 50%;
+    padding: 20px;
+    color: #333;
+}
+
+.video-section .video-description h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.video-section .video-description p {
+    margin: 10px 0;
+    font-size: 1.1rem;
+}
+
+/* Alinha vídeo à direita e descrição à esquerda */
+.video-section .video-container {
+    width: 50%;
+    text-align: right; /* Garante que o vídeo fique alinhado à direita */
+}
+
+.video-section video {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Testimonials */
+.testimonials {
+    background: white;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.testimonials h2 {
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+}
+
+.testimonial {
+    display: flex;
+    align-items: center;
+    margin: 20px auto;
+}
+
+.testimonial-img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.feedback p {
+    font-size: 1rem;
+    color: #555;
+}
+
+.rating {
+    color: #ffb400;
+    font-size: 1.2rem;
+}
+
+/* Purchase Section */
+.purchase-section {
+    background: #f1f8e9;
+    padding: 40px 0;
+}
+
+.purchase-section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form input {
+    padding: 10px;
+    margin: 10px 0;
+    width: 80%;
+    max-width: 400px;
+}
+
+.cta-btn {
+    padding: 10px 30px;
+    font-size: 1rem;
+}
+
+/* Footer */
+.footer {
+    background: #333;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer p {
+    font-size: 0.9rem;
+}
+
+.footer a {
+    color: #81c784;
+    text-decoration: none;
+}
