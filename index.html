@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Como Emagrecer em 40 Dias Saudavelmente</title>
+    <link rel="stylesheet" href="estilo.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+    <!-- Header Section -->
+    <!-- Header Section -->
+<!-- Header Section -->
+<header class="hero-section">
+    <div class="container header-content">
+        <!-- Logo / Imagem do livro -->
+        <div class="logo">
+            <img src="capa.jpg" alt="Capa do eBook: 45 Dias para o Corpo dos Seus Sonhos" class="book-cover">
+        </div>
+
+        <!-- Título e descrição -->
+        <div class="hero-text">
+            <h1>45 Dias para o Corpo dos Seus Sonhos!</h1>
+            <p>Transforme seu corpo e sua vida com estratégias saudáveis e eficazes!</p>
+            <button class="cta-btn" onclick="scrollToForm()">Baixe o eBook Agora!</button>
+        </div>
+
+        <!-- Menu de navegação -->
+        <nav class="main-nav">
+            <ul>
+                <li><a href="#about">Sobre</a></li>
+                <li><a href="#testimonials">Depoimentos</a></li>
+                <li><a href="#purchase-form">Comprar</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+
+
+    <!-- Video Section with Call to Action -->
+    <section class="video-section">
+        <div class="container">
+            <video id="ebook-video" autoplay loop>
+                <source src="Pronto.mp4" type="video/mp4">
+                Seu navegador não suporta o formato de vídeo.
+            </video>
+
+            <!-- Botões -->
+            <button id="pause-btn" class="cta-btn">Pausar Vídeo</button>
+            <button id="mute-btn" class="cta-btn">Desativar Som</button>
+            <div class="video-description">
+                <h2>Emagreça de forma saudável, rápida e eficaz.</h2>
+                <p>Alcance o corpo dos seus sonhos em apenas 45 dias! 
+                    Transforme seu estilo de vida com estratégias saudáveis e comprovadas, 
+                    sem dietas malucas ou promessas vazias. 
+                    Aprenda a emagrecer e manter os resultados 
+                    com orientações fáceis e práticas para transformar seu corpo 
+                    e ganhar mais confiança e energia no seu dia a dia!</p>
+                <button class="cta-btn" onclick="scrollToForm()">Compre Agora</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <h2>O que nossos leitores estão dizendo</h2>
+            <div class="testimonial">
+                <img src="pessoa2.jpg" alt="Marcio Lopes" class="testimonial-img">
+                <div class="feedback">
+                    <p>"O método é incrível! Perdi 5 kg em 2 semanas e me sinto muito melhor."</p>
+                    <div class="rating">⭐⭐⭐⭐⭐</div>
+                    <span>- Marcio Lopes</span>
+                </div>
+            </div>
+            <div class="testimonial">
+                <img src="pessoa1.jpg" alt="Vanessa Carraro" class="testimonial-img">
+                <div class="feedback">
+                    <p>"Nunca pensei que emagrecer poderia ser tão fácil e saudável. Recomendo!"</p>
+                    <div class="rating">⭐⭐⭐⭐⭐</div>
+                    <span>- Maria Oliveira</span>
+                </div>
+            </div>
+            <!-- Adicione mais depoimentos conforme necessário -->
+        </div>
+    </section>
+
+    <!-- Purchase Form Section -->
+    <section id="purchase-form" class="purchase-section">
+        <div class="container">
+            <h2>Adquira seu eBook agora e comece sua jornada!</h2>
+            <form id="form-purchase" action="/processar-compra" method="POST">
+                <input type="text" name="nome" placeholder="Seu nome completo" required>
+                <input type="email" name="email" placeholder="Seu e-mail" required>
+                <input type="number" name="telefone" placeholder="Seu telefone" required>
+                <a href="https://pay.kirvano.com/f241015f-f9d2-4bee-ab6d-f40f4a94053d" class="cta-btn" target="_blank">Comprar Agora por R$ 29,90</a>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Todos os direitos reservados. <a href="#">Política de Privacidade</a> | <a href="#">Termos de Uso</a></p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Obtenha os elementos do vídeo e os botões
+const video = document.getElementById('ebook-video');
+const pauseBtn = document.getElementById('pause-btn');
+const muteBtn = document.getElementById('mute-btn');
+
+// Função para pausar o vídeo e áudio
+pauseBtn.addEventListener('click', function () {
+    if (video.paused) {
+        video.play(); // Se o vídeo estiver pausado, toca ele
+        pauseBtn.textContent = 'Pausar Vídeo'; // Atualiza o texto do botão
+    } else {
+        video.pause(); // Se o vídeo estiver tocando, pausa ele
+        video.muted = false; // Garante que o som continue ativo ao retomar
+        pauseBtn.textContent = 'Retomar Vídeo'; // Atualiza o texto do botão
+    }
+});
+
+// Função para ativar/desativar o som
+muteBtn.addEventListener('click', function () {
+    if (video.muted) {
+        video.muted = false; // Se o vídeo estiver mudo, ativa o som
+        muteBtn.textContent = 'Desativar Som'; // Atualiza o texto do botão
+    } else {
+        video.muted = true; // Se o vídeo tiver som, desativa o som
+        muteBtn.textContent = 'Ativar Som'; // Atualiza o texto do botão
+    }
+});
+
+
+        function scrollToForm() {
+            document.getElementById('purchase-form').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Alerta após a compra
+        const form = document.getElementById('form-purchase');
+        form.addEventListener('submit', function(event) {
+            event.preventDefault();
+            Swal.fire({
+                title: 'Compra realizada com sucesso!',
+                text: 'Você será redirecionado em breve.',
+                icon: 'success'
+            }).then(() => {
+                form.submit(); // Envia o formulário após o alerta
+            });
+        });
+    </script>
+</body>
+</html>
